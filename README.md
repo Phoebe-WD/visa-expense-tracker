@@ -1,5 +1,7 @@
 # Visa Expenses — Google Apps Script
 
+🌐 [Leer en Español](README.es.md)
+
 Automatically reads Visa credit-card notification emails from Gmail and logs each transaction into a Google Sheets spreadsheet, organized by billing month.
 
 > **Important:** This script is designed for a specific email format (see below). For it to work, your bank must send Visa transaction notification emails whose plain-text body contains fields in this structure:
@@ -127,6 +129,18 @@ In the Apps Script editor, select `registerVisaExpenses` from the function dropd
 
 - **Gmail** — read messages and mark as read (`GmailApp`)
 - **Spreadsheet** — create sheets, read/write cells (`SpreadsheetApp`)
+
+## Contributors ⭐
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/Phoebe-WD"><img src="https://avatars.githubusercontent.com/u/68600680?v=4" width="100px;" alt=""/><br /><sub><b>Phoebe Sttefi Wilckens Díaz</b></sub></a><br />💻 📖</td>
+    <td align="center"><a href="https://github.com/leonardo-astete"><img src="https://avatars.githubusercontent.com/u/85591356?v=4" width="100px;" alt=""/><br /><sub><b>Leonardo Astete</b></sub></a><br />💻</td>
+  </tr>
+</table>
 
 ## License
 
