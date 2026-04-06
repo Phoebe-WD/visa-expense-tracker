@@ -88,6 +88,27 @@ Cualquier error al procesar un correo individual se captura y se registra en la 
 
 ![Ejemplo 2](assets/example2.png)
 
+## Personalización
+
+El script incluye comentarios `⚙️ CUSTOMIZE` marcando cada valor que podrías necesitar cambiar para adaptarlo a tu banco o preferencias:
+
+| Qué cambiar | Dónde en `script.js` |
+|---|---|
+| Nombre de etiqueta Gmail | `GmailApp.getUserLabelByName('Visa')` |
+| Palabra clave de anulación | `lowerBody.includes('anulación')` |
+| Regex de montos | `Monto\s+\$` / `Monto\s+USD` |
+| Regex y formato de fecha | `Fecha\s+(\d{2}\/\d{2}\/\d{4})` |
+| Regex del comercio | `Comercio\s+(.+)` |
+| Regex número de tarjeta | `Número tarjeta crédito\s+\*{4}(\d{4})` |
+| Regex de cuotas | `Cuotas\s+(\d+)` |
+| Día de corte del ciclo | `dateObject.getDate() >= 20` |
+| Nombres de meses (idioma) | Array `monthNames` |
+| Prefijo del nombre de hoja | `'Facturacion '` |
+| Encabezados de columnas | Array `headers` |
+| Formatos de moneda | `'$#,##0'` / `'USD #,##0.00'` |
+
+Busca `⚙️ CUSTOMIZE` en el script para encontrar cada uno con instrucciones detalladas.
+
 ## Configuración
 
 1. Abre tu hoja de cálculo de Google Sheets destino.

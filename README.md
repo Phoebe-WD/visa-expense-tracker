@@ -88,6 +88,27 @@ Any processing error for a single email is caught and logged to the Apps Script 
 
 ![Example 2](assets/example2.png)
 
+## Customization
+
+The script includes `⚙️ CUSTOMIZE` comments marking every value you may need to change to adapt it to your bank or preferences:
+
+| What to change | Where in `script.js` |
+|---|---|
+| Gmail label name | `GmailApp.getUserLabelByName('Visa')` |
+| Cancellation keyword | `lowerBody.includes('anulación')` |
+| Amount regex patterns | `Monto\s+\$` / `Monto\s+USD` |
+| Date regex & format | `Fecha\s+(\d{2}\/\d{2}\/\d{4})` |
+| Merchant regex | `Comercio\s+(.+)` |
+| Card number regex | `Número tarjeta crédito\s+\*{4}(\d{4})` |
+| Installments regex | `Cuotas\s+(\d+)` |
+| Billing cycle cutoff day | `dateObject.getDate() >= 20` |
+| Month names (language) | `monthNames` array |
+| Sheet name prefix | `'Facturacion '` |
+| Column headers | `headers` array |
+| Currency formats | `'$#,##0'` / `'USD #,##0.00'` |
+
+Search for `⚙️ CUSTOMIZE` in the script to find each one with detailed instructions.
+
 ## Setup
 
 1. Open your target Google Spreadsheet.
